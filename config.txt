@@ -1,0 +1,4 @@
+interval=1;
+duration=30;
+input_file=result.json;
+output_file=histogram.html;

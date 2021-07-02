@@ -1,0 +1,146 @@
+package com.company;
+
+import org.jsoup.Jsoup;
+import org.w3c.dom.Document;
+
+import javax.swing.text.html.parser.Element;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        ReadFile readFile = new ReadFile("messages.html");
+        readFile.read();
+
+      //  readFile.nieznanaZawartosc(readFile.text, "(?s)<div class=\"message default clearfix joined\".*?<div class=\"body\">");
+
+
+        //List<String> mojaLista = readFile.zwrocListeStringowKonkretnychPojedynczychWiadomosciCzyTamPakietowWiadomosci(readFile.text,"<div class=\"message default cle(.+?)arfix\" id=\"" );
+        List<String> mojaLista = readFile.zwrocListeStringowKonkretnychPojedynczychWiadomosciCzyTamPakietowWiadomosci(readFile.text,"arfix\" id=\"(.+?)<div class=\"message default cle" );
+
+
+
+
+
+
+        for ( String pizgawelek : mojaLista){
+            readFile.pomiedzy(pizgawelek,
+                "<div class=\"pull_right date details\" title=\"(.+?)>",
+                "<div class=\"from_name\">(.+?)</div>",
+                "<div class=\"text\">(.+?)</div>");}
+
+
+
+
+
+
+
+//
+//        //for ( String str : temp)
+//        ArrayList<Message> messages1 = readFile.pomiedzy(readFile.text,
+//                "<div class=\"pull_right date details\" title=\"(.+?)>",
+//                "<div class=\"from_name\">(.+?)</div>",
+//                "<div class=\"text\">(.+?)</div>");
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        List<Person> listOfPeople = new ArrayList<Person>();
+
+
+        for(Message str:readFile.matchList) {
+            boolean isPerson = false;
+            for (Person prs : listOfPeople)
+                if (prs.getPersonName().equals(str.getPerson()))
+                    isPerson = true;
+
+            if (!isPerson){
+
+                Person person=new Person();
+                if (str.getMessage().equals("in"))
+                    listOfPeople.add(person.insertHourIn(str.getPerson(), str.getHour()));
+                else if (str.getMessage().equals("out"))
+                    listOfPeople.add(person.insertHourOut(str.getPerson(),  str.getHour()));
+                            }
+                else {
+                            //istnieje osoba
+                            if (str.getMessage().equals("in"))
+                                listOfPeople.stream().filter(f -> f.personName.equals(str.getPerson())).forEach(person -> person.setHourIn(str.getHour()));
+                            else if (str.getMessage().equals("out"))
+                                listOfPeople.stream().filter(f -> f.personName.equals(str.getPerson())).forEach(person -> person.setHourOut(str.getHour()));
+                        }
+
+        }
+
+
+        listOfPeople.stream()
+              //  .filter(filter->filter.personName.equals("Mateusz Proskura "))
+                .forEach(filter->
+                {
+                    System.out.println(filter.personName);
+
+                    System.out.println("IN");
+                    for (String str : filter.hourIn)
+                        System.out.println(str);
+
+                    System.out.println("OUT");
+                    for (String str : filter.hourOut)
+                        System.out.println(str);
+                        //  System.out.println(msg.toString());
+                    ;
+                });
+
+
+
+
+//        readFile.matchList.stream()
+//                //.filter(filter->filter.person.equals("Mateusz Proskura "))
+//                .filter(filter->filter.person.equals("Przemysław Suszek "))
+//                .filter(filter->filter.message.equals("in"))
+//                .forEach(filter->System.out.println(filter.hour));
+
+//readFile.printList();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //for (Message msg : readFile.mojaLista)
+          //  System.out.println(msg.toString());
+
+
+
+//readFile.pomiedzy(readFile.text,"<div class=\"body\">(.+?)<div class=\"body\">");
+
+//<div class="message default clearfix" id="
+
+    }
+}
