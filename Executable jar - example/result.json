@@ -1,0 +1,164 @@
+{
+ "name": "GropuName",
+ "type": "private_group",
+ "id": 123,
+ "messages": [
+  {
+   "id": 4,
+   "type": "message",
+   "date": "2021-05-06T08:15:17",
+   "from": "User1",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#in"
+    }
+   ]
+  },
+    {
+   "id": 5,
+   "type": "message",
+   "date": "2021-05-06T09:15:17",
+   "from": "User2",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#in"
+    }
+   ]
+  },
+    {
+   "id": 6,
+   "type": "message",
+   "date": "2021-05-06T16:15:17",
+   "from": "User1",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#out"
+    }
+   ]
+  },
+    {
+   "id": 7,
+   "type": "message",
+   "date": "2021-05-06T17:15:17",
+   "from": "User2",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#out"
+    }
+   ]
+  },
+    {
+   "id": 8,
+   "type": "message",
+   "date": "2021-05-06T09:15:17",
+   "from": "User1",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#in"
+    }
+   ]
+  },
+    {
+   "id": 9,
+   "type": "message",
+   "date": "2021-05-06T10:15:17",
+   "from": "User2",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#in"
+    }
+   ]
+  },
+    {
+   "id": 10,
+   "type": "message",
+   "date": "2021-05-06T17:15:17",
+   "from": "User1",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#out"
+    }
+   ]
+  },
+    {
+   "id": 11,
+   "type": "message",
+   "date": "2021-05-06T18:15:17",
+   "from": "User2",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#out"
+    }
+   ]
+  },
+    {
+   "id": 12,
+   "type": "message",
+   "date": "2021-05-06T09:15:17",
+   "from": "User1",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#in"
+    }
+   ]
+  },
+    {
+   "id": 13,
+   "type": "message",
+   "date": "2021-05-06T10:15:17",
+   "from": "User2",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#in"
+    }
+   ]
+  },
+    {
+   "id": 14,
+   "type": "message",
+   "date": "2021-05-06T17:15:17",
+   "from": "User1",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#out"
+    }
+   ]
+  },
+    {
+   "id": 15,
+   "type": "message",
+   "date": "2021-05-06T18:15:17",
+   "from": "User2",
+   "from_id": "user584000636",
+   "text": [
+    {
+     "type": "hashtag",
+     "text": "#out"
+    }
+   ]
+  },
+  
+  ]
+  }
