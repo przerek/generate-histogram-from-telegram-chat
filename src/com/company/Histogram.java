@@ -8,14 +8,14 @@ public class Histogram {
     HTMLContent htmlContent = new HTMLContent();
 
     public void writeToFile(String zawartosc) {
-        Config config = Config.getInstance();
+
         try {
-            FileWriter myWriter = new FileWriter(config.getOutput_file());
+            FileWriter myWriter = new FileWriter("histogram.html");
             myWriter.write(zawartosc);
             myWriter.close();
-            System.out.println("Successfully wrote to the file.");
+            System.out.println("Zapisano pomyślnie.");
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Wystąpił błąd.");
             e.printStackTrace();
         }
     }

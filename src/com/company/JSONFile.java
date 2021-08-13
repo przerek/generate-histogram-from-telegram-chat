@@ -21,10 +21,10 @@ public class JSONFile {
     List<Message> records = new ArrayList<Message>();
 
     public String read() {
-        Config config = Config.getInstance();
+
         try {
             String data = "";
-            File myObj = new File(config.getInput_file());
+            File myObj = new File("result.json");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine())
                 data += myReader.nextLine();
